@@ -1,0 +1,212 @@
+*{
+    background-color: rgb(246, 246, 246);
+    scroll-behavior: smooth;
+}
+
+#website-title{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #202020;
+}
+
+#website-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e5e5e5;
+}
+
+#website-buttons{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    text-align: center;
+}
+
+.btn-login{
+    color: #202020;
+    background-color: #fafafa;
+    width: fit-content;
+    padding: 10px;
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 10px;
+    border-style: none;
+    height: 40px;
+    width: 80px;
+    text-decoration: none;
+    filter: drop-shadow(0px 0px 3px #767676ab);
+}
+
+.btn-login:hover{
+    background-color: #e9e6e6;
+    color: #202020;
+    text-decoration: none;
+}
+
+.btn-signin{
+    color: #e5e5e5;
+    background-color: #0d6efd;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 10px;
+    border-style: none;
+    height: 40px;
+    width: 80px;
+    text-decoration: none;
+    margin-left: 10px;
+    filter: drop-shadow(0px 0px 3px #1875d2ab);
+
+}
+
+.btn-signin:hover{
+    background-color: #0e5bd0;
+    color: #e5e5e5;
+    text-decoration: none;
+    filter: drop-shadow(0px 0px 3px #1875d2ab);
+}
+
+.btn-seemore{
+    color: #e5e5e5;
+    background-color: #0d6efd;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 10px;
+    border-style: none;
+    height: 40px;
+    width: 125px;
+    filter: drop-shadow(0px 0px 3px #1875d2ab);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.btn-seemore:hover{
+    background-color: #0e5bd0;
+    color: #e5e5e5;
+    text-decoration: none;
+    filter: drop-shadow(0px 0px 3px #1875d2ab);
+}
+
+#heroleft{
+    display: grid;
+    place-items: left;
+    color: #202020;
+    font-size: 28px;
+
+}
+
+#heroright{
+    display: grid;
+    place-items: center;
+    color: #e5e5e5;
+}
+
+#iphoneurnik{
+    width: 110%;
+    margin-top: -30.5vh;
+
+}
+
+#under-typewriter{
+    margin-top: -50vh;
+}
+
+#under-typewriter-text{
+    color: #9c9c9c;
+    font-size: 16px;
+    margin-top: 3.5vh;
+}
+
+#hero2-title{
+    text-align: center;
+}
+
+#hero2{
+    display: grid;
+    place-items: center;
+    color: #202020;
+    margin-top: 15vh;
+}
+
+#funkcije-skatle{
+    display: flex;
+    justify-content: top;
+    align-items: center;
+
+}
+
+.funkcije{
+    background-color: #dadada;
+    height: 40vh;
+    width: 40vh;
+    margin-top: 10vh;
+    border-radius: 15px;
+    filter: drop-shadow(0px 0px 10px #c8c8c8ab);
+    margin-bottom: 20vh;
+
+}
+
+#btn-download{
+    color: #0d6efd;
+    background-color: #e5e5e5;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 10px;
+    border-style: none;
+    filter: drop-shadow(0px 0px 3px #1875d2ab);
+    text-decoration: none;
+    width: 500px;
+    height: 300px;
+}
+
+#btn-download:hover{
+    background-color: #e5e5e5;
+    color: #0d6efd;
+    text-decoration: none;
+    filter: drop-shadow(0px 0px 3px #404040ab);
+}
+
+#hero3{
+    text-align: center;
+}
+
+#iphonemacurnik{
+    width: 75vw;
+}
+
+#box-iphone-mac{
+    text-align: center;
+
+
+}
+
+#h1-box-iphone-mac{
+    text-align: center;
+    margin-top: 20vh;
+
+}
+
+#box1{
+    background-image: url(/images/box1.png);
+    background-size: contain;
+}
+
+#box2{
+    background-image: url(/images/box2.png);
+    background-size: contain;
+}
+
+#box3{
+    background-image: url(/images/box3.png);
+    background-size: contain;
+}

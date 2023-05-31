@@ -1,0 +1,154 @@
+<section>
+    <div class="row sticky-top" style="height: 10vh; opacity: 0.99;">
+        <div class="col-1"></div>
+        <div class="col-2" id="website-title">
+            <a>Appurnik</a>
+        </div>
+        <div class="col-6" id="website-nav">
+        </div>
+        <div class="col-2" id="website-buttons">
+            <a href="http://localhost:3000/signin" class="btn-login">Prijavi se</a>
+            <a href="http://localhost:3000/login" class="btn-signin">Vstopi</a>
+        </div>
+
+        <div class="col-1"></div>
+    </div>
+  </section>
+  <section>
+    <div class="row" style="height: 30vh;"></div>
+
+    <div class="row" style="height: 60vh;">
+        <div class="col-1"></div>
+
+        <div class="col-5" id="heroleft">
+            <div class="typewriter">
+            <h1>Urnik
+                <a class="typewrite" data-period="2000" style="color:#0e5bd0" data-type='[ "revolucioniran", "moderniziran", "spretnejši"]'>
+                  <span class="wrap"></span>
+                </a>
+            </h1>
+          </div>
+          <div id="under-typewriter">
+            <p id="under-typewriter-text">Nova aplikacija za urnik!</p>
+            <br>
+              <a href="http://localhost:3000/login" class="btn-seemore">Vstopi</a>
+            </div>
+         </div>
+         <div class="col-5" id="heroright">
+            <img src="/images/iphone.png" alt="iphone" id="iphoneurnik">
+         </div>
+    </div>
+  </section>
+  <section>
+    <div class="row" style="height: 30vh;" id="hero2-title">
+      <div class="col">
+        <h1 style="margin-top: 20vh">Spretna nastavitev</h1>
+      </div>
+    </div>
+    <div class="row" style="height: 45vh;">
+      <div class="col-2"></div>
+      <div class="col">
+        <div class="funkcije" id="box1">
+          
+        </div>
+      </div>
+      <div class="col">
+        <div class="funkcije" id="box2">
+        </div>
+      </div>
+      <div class="col">
+        <div class="funkcije" id="box3"></div>
+      </div>
+      <div class="col-2"></div>
+    </div>
+  </section>
+
+<section>
+  <div class="row" style="height: 10vh;"></div>
+</section>
+  
+
+  <section>
+    <div class="row">
+      <div class="col" id="box-iphone-mac">
+        <h1 id="h1-box-iphone-mac">Za Računalnik in Telefon</h1>
+        <img src="/images/urnik-iphone-mac.png" alt="urnik-iphone-mac" id="iphonemacurnik">
+      </div>
+    </div>
+  </section>
+
+
+<div class="row" style="height: 30vh;"></div>
+
+    <div class="row" style="height: 35vh;">
+      <div class="col-4" style="background-color: #0e5bd0;"></div>
+      <div class="col" style="background-color: #0e5bd0;" id="hero3">
+          <h1 style="background-color: #0e5bd0; color: #e5e5e5; margin-top: 10vh; margin-bottom: 4vh;">Naložiga tudi ti!</h1>
+          <a href="http://localhost:3000/login" id="btn-download">Naloži</a>
+      </div>
+      <div class="col-4" style="background-color: #0e5bd0;"></div>
+    </div>
+
+    <section>
+      <div class="row">
+      <div class="col-12">
+        <footer class="py-3 my-4">
+          <p class="text-center text-muted">© Gabriel Tavcar, 4.UZ</p>
+        </footer>
+      </div>
+     </div>
+    </section>
+
+    <script>
+        var TxtType = function(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+};
+
+TxtType.prototype.tick = function() {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+
+    if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+    var that = this;
+    var delta = 200 - Math.random() * 100;
+
+    if (this.isDeleting) { delta /= 2; }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+    }
+
+    setTimeout(function() {
+    that.tick();
+    }, delta);
+};
+
+window.onload = function() {
+    var elements = document.getElementsByClassName('typewrite');
+    for (var i=0; i<elements.length; i++) {
+        var toRotate = elements[i].getAttribute('data-type');
+        var period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+          new TxtType(elements[i], JSON.parse(toRotate), period);
+        }
+    }
+};
+</script>

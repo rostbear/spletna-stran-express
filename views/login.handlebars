@@ -1,0 +1,32 @@
+    
+<div class="row" style="height: 20vh;">
+    <div class="col-11"></div>
+    <div class="col-1">
+        <a href="http://localhost:3000/"><i class="fa-solid fa-xmark fa-2x" style="color: #202020;"></i></a>
+    </div>
+</div>
+
+
+<div class="row justify-content-md-center" style="height: 60vh;">
+    <div class="col-4"></div>
+    <div class="col-4"  id="login-form">
+        <form action="http://localhost:3000/form-submit" method="post">
+            <h2>Vstopi</h2>
+            <br>
+            {{#if napaka}}
+                <h4>{{sporocilo}}</h4>
+            {{/if}}
+            <br>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <br><br>
+            <input type="password" name="password" placeholder="Geslo" required>
+            <br>
+            <button type="submit" class="btn-login">Vstopi</button>
+        </form>
+    <a href="http://localhost:3000/signin" style="color: blue;">Uporabnik ne obstaja?</a>
+    </div>
+    <div class="col-4"></div>
+
+</div>
+
+<div class="row" style="height: 20vh;"></div>
